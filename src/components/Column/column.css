@@ -1,0 +1,62 @@
+/* Base styling for the column container */
+.column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem; /* Adds consistent spacing between child elements */
+}
+
+/* Styling for the column header */
+.column .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 0.5rem; /* Horizontal spacing between items */
+}
+
+/* Left section of the column header */
+.column .header-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+/* Right section of the column header */
+.column .header-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+/* Styling for the column title */
+.column .title {
+    font-size: 12px;
+    text-transform: capitalize; /* Ensures the first letter of each word is capitalized */
+}
+
+/* Styling for the count displayed next to the title */
+.column .title .item-count {
+    margin-left: 0.5rem; /* Adds spacing to the left */
+    color: #6b6f76; /* Neutral color for secondary text */
+}
+
+/* Container for cards within a column */
+.column .content-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+/* Responsive styling for screens smaller than 700px */
+@media screen and (max-width: 700px) {
+    .column {
+        width: calc(100vw - 4rem); /* Adjusts column width for smaller screens */
+    }
+    .column .content-container {
+        width: 100%;
+        overflow-x: auto; /* Allows horizontal scrolling for content */
+        flex-direction: row; /* Cards are displayed horizontally */
+    }
+}
